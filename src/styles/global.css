@@ -1,0 +1,39 @@
+/* Reset simples + variáveis de tema (CSS puro, sem bibliotecas) */
+:root {
+  --bg: #0d0f1a;
+  --bg-suave: #141829;
+  --card: #1b2038;
+  --borda: #2a3152;
+  --texto: #e8ecff;
+  --texto-fraco: #98a0c4;
+  --neon: #35e0d0;
+  --neon-escuro: #14b8a6;
+  --rosa: #ff4d88;
+  --raio: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--bg);
+  background-image: linear-gradient(160deg, #0d0f1a 0%, #131a2e 100%);
+  background-attachment: fixed;
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

@@ -1,0 +1,120 @@
+.carrinhoPainel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 10;
+  width: 320px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding: 16px;
+  text-align: left;
+  background: var(--bg-suave);
+  border: 1px solid var(--neon);
+  border-radius: var(--raio);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  animation: carrinho-surge 0.18s ease-out;
+}
+
+@keyframes carrinho-surge {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carrinhoPainelTitulo {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: var(--texto);
+}
+
+.carrinhoPainelVazio {
+  padding: 14px 0;
+  font-size: 0.9rem;
+  color: var(--texto-fraco);
+}
+
+.carrinhoPainelLista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.carrinhoItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  transition: border-color 0.2s ease;
+}
+
+.carrinhoItem:hover {
+  border-color: var(--neon);
+}
+
+.carrinhoItemImagem {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carrinhoItemInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.carrinhoItemNome {
+  font-size: 0.85rem;
+  color: var(--texto);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.carrinhoItemQtd {
+  font-size: 0.75rem;
+  color: var(--texto-fraco);
+}
+
+.carrinhoItemSubtotal {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--neon);
+  white-space: nowrap;
+}
+
+.carrinhoPainelTotal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 12px;
+  font-size: 0.95rem;
+  color: var(--texto-fraco);
+  border-top: 1px solid var(--borda);
+}
+
+.carrinhoPainelTotal strong {
+  font-size: 1.1rem;
+  color: var(--neon);
+}
+
+@media (max-width: 600px) {
+  .carrinhoPainel {
+    right: auto;
+    left: 0;
+    width: 100%;
+    min-width: 260px;
+  }
+}

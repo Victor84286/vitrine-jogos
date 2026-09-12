@@ -1,0 +1,28 @@
+/* Grade responsiva: os cards se reorganizam sozinhos conforme a largura */
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.listaVazia {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--texto-fraco);
+  background: var(--bg-suave);
+  border: 1px dashed var(--borda);
+  border-radius: var(--raio);
+}
+
+@media (max-width: 900px) {
+  .lista {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .lista {
+    grid-template-columns: 1fr;
+  }
+}

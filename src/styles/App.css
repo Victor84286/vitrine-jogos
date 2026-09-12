@@ -1,0 +1,30 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.appConteudo {
+  margin-top: 28px;
+}
+
+.appResumo {
+  color: var(--texto-fraco);
+  font-size: 0.9rem;
+  margin: 18px 0 14px;
+}
+
+.appRodape {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--borda);
+  text-align: center;
+  color: var(--texto-fraco);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 16px 14px 32px;
+  }
+}

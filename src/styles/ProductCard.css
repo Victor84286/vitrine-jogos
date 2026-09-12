@@ -1,0 +1,117 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Efeito de hover no card */
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--neon);
+  box-shadow: 0 14px 34px rgba(53, 224, 208, 0.18);
+}
+
+.cardImagemWrapper {
+  position: relative;
+}
+
+.cardImagem {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.cardCategoria {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  color: var(--texto);
+  background: rgba(13, 15, 26, 0.8);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+}
+
+.cardFavorito {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  font-size: 1.2rem;
+  color: var(--texto-fraco);
+  background: rgba(13, 15, 26, 0.8);
+  border: 1px solid var(--borda);
+  border-radius: 50%;
+  transition: transform 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cardFavorito:hover {
+  transform: scale(1.12);
+  color: var(--rosa);
+  border-color: var(--rosa);
+}
+
+.cardFavoritoAtivo {
+  color: var(--rosa);
+  border-color: var(--rosa);
+  background: rgba(255, 77, 136, 0.15);
+}
+
+.cardConteudo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+  padding: 16px;
+}
+
+.cardNome {
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+
+.cardPlataforma {
+  font-size: 0.82rem;
+  color: var(--texto-fraco);
+}
+
+.cardPreco {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--neon);
+}
+
+.cardBotao {
+  margin-top: 10px;
+  padding: 11px 14px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #06231f;
+  background: var(--neon);
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cardBotao:hover {
+  background: var(--neon-escuro);
+  transform: translateY(-2px);
+}
+
+.cardBotao:active {
+  transform: translateY(0);
+}
+
+.cardStatus {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--texto-fraco);
+  text-align: center;
+}
