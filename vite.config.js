@@ -5,5 +5,5 @@ import { defineConfig } from 'vite'
 // (https://<usuario>.github.io/vitrine-games/)
 export default defineConfig({
   plugins: [react()],
-  base: '/vitrine-games/',
+  base: '/vitrine-jogos/',
 })
